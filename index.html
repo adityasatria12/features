@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthy Mental Company</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo-company">
+        <img src="assets/logo.png" alt="Logo Company" />
+      </div>
+      <nav class="navbar">
+        <div class="nav-item"><a href="index.html">Home</a></div>
+        <div class="nav-item">
+          <a href="./component/profile.html">Our Profile</a>
+        </div>
+        <div class="nav-item"><a href="#">Portofolio</a></div>
+        <div class="nav-item"><a href="#message-us-section">Message Us</a></div>
+      </nav>
+
+      <!-- Start Humberger Menu -->
+      <div class="humberger-menu">
+        <span class="humberger"></span>
+        <span class="humberger"></span>
+        <span class="humberger"></span>
+      </div>
+    </div>
+    <!-- End Humberger Menu -->
+
+    <div id="hero" class="banner-hero">
+      <!-- Start Slider -->
+      <div class="slider">
+        <div class="menu-slider">
+          <div class="nav-item"><a href="index.html">Home</a></div>
+          <div class="nav-item"><a href="profile.html">Our Profile</a></div>
+          <div class="nav-item"><a href="#">Portofolio</a></div>
+          <div class="nav-item">
+            <a href="#message-us-section">Message Us</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- End Slider -->
+
+      <div class="hero-wrapper">
+        <img src="assets/slide-1.jpg" alt="img-1" class="image-slider" />
+        <img src="assets/slide-2.jpg" alt="img-2" class="image-slider" />
+        <img src="assets/slide-3.jpg" alt="img-3" class="image-slider" />
+      </div>
+      <div class="hero-text">
+        <h1 class="greeting-word">
+          Hi, <span id="username"></span>, Welcome To Aditya Mental Healthy
+          Centre
+        </h1>
+        <p class="description-banner">Bagaimana Kondisi mu hari ini?</p>
+        <p class="description-banner">Apa ada yang bisa kami bantu?</p>
+      </div>
+    </div>
+    <div id="headquarter-section">
+      <h1>Headquarters</h1>
+      <div class="wrapper">
+        <div class="headquarters-image-container">
+          <div class="headquarters-image jkt"></div>
+          <p>Jakarta</p>
+        </div>
+        <div class="headquarters-image-container">
+          <div class="headquarters-image ny"></div>
+          <p>New York</p>
+        </div>
+        <div class="headquarters-image-container">
+          <div class="headquarters-image bcr"></div>
+          <p>Barcelona</p>
+        </div>
+      </div>
+    </div>
+    <div id="message-us-section" class="message-us">
+      <h1>Message Us</h1>
+      <div class="wrapper-input-output">
+        <form
+          method="post"
+          action="#message-us-section"
+          name="message-form"
+          class="form-style"
+          onsubmit="return validateform()"
+        >
+          <table>
+            <tr>
+              <td>Nama</td>
+              <td>:</td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Nama"
+                  name="full-name"
+                  class="table-width"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Tanggal Lahir</td>
+              <td>:</td>
+              <td>
+                <input type="date" name="birth-date" class="table-width" />
+              </td>
+            </tr>
+            <tr>
+              <td>Jenis Kelamin</td>
+              <td>:</td>
+              <td>
+                <input type="radio" id="male" value="Laki-Laki" name="gender" />
+                <label for="male">Laki-Laki</label>
+                <input
+                  type="radio"
+                  id="female"
+                  value="Perempuan"
+                  name="gender"
+                />
+                <label for="female">Perempuan</label>
+              </td>
+            </tr>
+            <tr>
+              <td>Pesan</td>
+              <td>:</td>
+              <td>
+                <textarea
+                  name="messages"
+                  placeholder="Pesan dan kesan anda"
+                  cols="20"
+                  rows="8"
+                >
+                </textarea>
+              </td>
+            </tr>
+            <td>
+              <input
+                type="submit"
+                value="submit"
+                class="table-submit"
+                rowspan="2"
+              />
+            </td>
+          </table>
+        </form>
+        <div class="wrapper-output">
+          <table class="output-style">
+            <tr>
+              <td>Nama</td>
+              <td>:</td>
+              <td id="sender-full-name"></td>
+            </tr>
+            <tr>
+              <td>Tanggal-Lahir</td>
+              <td>:</td>
+              <td id="sender-birth-date"></td>
+            </tr>
+            <tr>
+              <td>Jenis-Kelamin</td>
+              <td>:</td>
+              <td id="sender-gender"></td>
+            </tr>
+            <tr>
+              <td>Pesan</td>
+              <td>:</td>
+              <td id="sender-messages"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <span class="text-footer">Dibuat oleh Aditya Satria</span>
+    </footer>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,401 @@
+/* css reset */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Content */
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.header{
+    display: flex;
+    /* position: fixed; */
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 0.4rem;
+    flex-direction: row;
+    border-bottom: 1px solid black;
+    /* z-index: 9999; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-company img{
+    height: 4rem;
+    border: 1px solid green;
+    border-radius: 60px;
+    margin-left:2.5rem;
+}
+
+nav{
+    display:flex;
+    flex: column;
+    margin-right: 3rem;
+}
+
+nav a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.nav-item{
+    width: 9rem;
+    padding: 0.7rem 1rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+ .nav-item:hover{
+    background-color: #7CFC00;
+    margin-top: -3px;
+    margin-right: -2px;
+    border: 1px solid  #333;
+}
+
+
+
+#hero{
+    position: relative;
+    height: 100vh;
+}
+
+
+.hero-wrapper img{
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    position: absolute;
+}
+
+.hero-text{
+    position: absolute; 
+    padding-top: 5rem;
+    padding-left: 3rem;
+}
+
+.banner-hero .hero-text .description-banner{
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+#headquarter-section{
+    width: 100vw;
+    border-top: 3px solid #333 ;
+    border-bottom: 3px solid #333 ;
+    margin-top: 0.1rem;
+    padding-top: 1.5rem;
+    padding-left: 4rem;
+} 
+
+#headquarter-section h1{
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-evenly;
+}
+.headquarters-image-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headquarters-image{
+    height: 10rem;
+    width: 10rem;
+    border: 1px solid #000000;
+    border-radius: 50%;
+}
+
+.headquarters-image.jkt{
+    background-image: url(/assets/Quarter-1.jpg);
+    background-position-y: -150px;
+}
+
+.headquarters-image.ny{
+    background-image: url(/assets/quarter-2.jpg);
+    background-position-x: 480px;
+    background-position-y: -250px;
+}
+
+.headquarters-image.bcr{
+    background-image: url(/assets/quarter-3.jpg);
+    background-position-y: -150px;
+}
+
+.headquarters-image-container p{
+    padding: 1rem 0;
+    font-weight: 700;
+}
+
+.message-us {
+    background-color: #52bf90;
+    padding-top: 3rem   ;
+    padding-bottom: 3rem;
+    
+    }
+     
+.message-us h1{ 
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+ .wrapper-input-output{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+
+.form-style{
+    grid-area: input;
+    padding: 3rem;
+    background-color:#87a9d6;
+    border: 1px solid #000000;
+}
+
+.form-style .table-width{
+    padding: 0.5rem 2rem;
+    border-radius: 10%;
+    width: 20rem;
+}
+
+.form-style .table-submit{
+    width: 12rem;
+    padding: 1rem 0;
+    border-radius: 20%;
+    background-color: #85bdde;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-style .table-submit:hover{
+    background-color: #ccabd8;
+}
+
+
+
+.output-style{
+    grid-area: output;
+    display: flex;
+    border: 1px solid #000000;
+    background-color: #87a9d6;
+    width: 40rem;
+    height: 30rem;
+}
+
+
+
+footer{
+    border-top:1px solid #000000 ;
+    background-color: #9ac7a9;
+}
+.text-footer {
+    margin-right: 50px;
+}
+
+/* Humberger Menu */
+.humberger-menu {
+    display: none;
+}
+
+.slider{
+    display: none;
+}
+
+
+
+/* Responsive Breakpoint */
+/* 968 Ukuran web */
+@media screen and (max-width: 968px) {
+    .message-us .wrapper-input-output{
+        display:flex ;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        gap: 3rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav{
+        display: none;
+    }
+
+
+    /* Start Humberger menu */
+    .humberger-menu{
+        /* width: 5rem;
+        height: 3rem; */
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        transition: all;
+    }
+
+    .humberger-menu span{
+        border-radius: 5px;
+        display: block;
+        background-color: tomato;
+        width: 4rem;
+        height: 0.5rem;
+    }
+
+    .slider{
+        display: block;
+        position: fixed;
+        z-index: 999999;
+        width: 30%;
+        height: 100%;
+        padding-top:50px ;
+        background-color: tomato;
+        right: 0px;
+        transition: all;
+        transition: 3s;
+    }
+
+    .menu-slider{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    
+
+
+
+    /* End humberger menu */
+
+
+    .form-style{
+        width: 46.4rem;
+    }
+
+    .output-style{
+        width: 46.4rem;
+    }
+
+
+}
+
+
+
+
+/* 768px atau tablet */
+@media screen and (max-width: 768px) {
+    .message-us .wrapper-input-output{
+        display:flex ;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        gap: 3rem;
+    }
+
+    .output-style{
+        width: 45rem;
+    }
+
+
+}
+
+/* Layar Handphone */
+@media screen and (max-width: 685px){
+    .logo-company img{
+        height: 10rem;
+        border: 1px solid green;
+        border-radius: 60px;
+        margin-left:2.7rem;
+    }
+
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+
+
+    .wrapper{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    .headquarters-image-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-style{
+        display: flex;
+        flex-grow: 1;
+        max-width: 430px;
+        padding: 1.5rem;
+        background-color:#87a9d6;
+        border: 1px solid #000000;
+    }
+    
+    .form-style .table-width{
+        padding: 0.2rem 1rem;
+        border-radius: 10%;
+        max-width: 10rem;
+    }
+    
+    .form-style .table-submit{
+        width: 6rem;
+        padding: 1rem 0;
+        border-radius: 20%;
+        background-color: #85bdde;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .message-us{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .wrapper-input-output{
+        width: 20rem;
+    }
+    
+    label  {
+        font-size: 0.9em;
+    } 
+
+    
+
+    .output-style{
+        width: 20rem;
+        margin: 0px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
